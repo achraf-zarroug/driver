@@ -1,98 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
-  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  --color-obsidian: #0A0A0C;
-  --color-obsidian-soft: #121216;
-  --color-obsidian-elevated: #18181D;
-  --color-alabaster: #F7F5F0;
-  --color-alabaster-warm: #EFECE5;
-  --color-ink: #141418;
-  --color-ink-muted: #5C5953;
-  --color-champagne: #C8A46B;
-  --color-champagne-light: #DEC18E;
-  --color-champagne-dark: #9E7B42;
-  --color-whatsapp: #25D366;
-  --color-whatsapp-dark: #1BA950;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
   }
 
   h1, h2, h3, .font-editorial {
     font-family: var(--font-serif);
   }
-}
-
-/* Custom sleek scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0A0A0C;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2C2A26;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #C8A46B;
-}
-
-/* Subtle champagne hairline shimmer */
-.hairline-gold {
-  background: linear-gradient(90deg, transparent, rgba(200, 164, 107, 0.45), transparent);
-}
-
-/* Form input dark/light polish */
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  opacity: 0.65;
-  transition: opacity 0.2s ease;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator:hover,
-input[type="time"]::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
-}
-
-/* Smooth fade-up entrance */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-fade-up-delay-1 {
-  opacity: 0;
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
-}
-
-.animate-fade-up-delay-2 {
-  opacity: 0;
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
-}
-
-.animate-fade-up-delay-3 {
-  opacity: 0;
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards;
 }
