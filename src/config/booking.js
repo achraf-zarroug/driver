@@ -12,33 +12,29 @@ export const VEHICLES = [
   {
     id: 'normale',
     label: 'Voiture Normale',
-    models: 'Peugeot 508 · Berline Confort',
-    seats: '3 passagers · 2 bagages',
-    price: 'Dès 45 €',
+    models: 'Taxi Standard · Berline Confort',
+    seats: '1 à 3 passagers · 2 bagages',
     image: normalCarImg,
   },
   {
     id: 'haute-gamme',
     label: 'Voiture Haute Gamme',
-    models: 'Mercedes Classe E · BMW Série 5',
-    seats: '3 passagers · 3 bagages',
-    price: 'Dès 65 €',
+    models: 'Taxi Affaires · Mercedes Classe E / Série 5',
+    seats: '1 à 3 passagers · 3 bagages',
     image: executiveCarImg,
   },
   {
     id: 'luxe',
     label: 'Voiture de Luxe',
-    models: 'Mercedes Classe S · Maybach',
-    seats: '3 passagers · 3 bagages',
-    price: 'Dès 110 €',
+    models: 'Taxi Prestige · Mercedes Classe S',
+    seats: '1 à 3 passagers · 3 bagages',
     image: luxuryCarImg,
   },
   {
     id: 'van',
     label: 'Van',
-    models: 'Mercedes Classe V · 7 Places',
-    seats: '7 passagers · 7 bagages',
-    price: 'Dès 85 €',
+    models: 'Taxi Van · Mercedes Classe V (7 places)',
+    seats: 'Jusqu’à 7 passagers · 7 bagages',
     image: vanImg,
   },
 ]
@@ -47,10 +43,10 @@ export function buildWhatsAppUrl({ clientName, pickupAddress, dropoffAddress, ve
   const vehicle = VEHICLES.find((v) => v.id === vehicleId) || VEHICLES[0]
 
   const message = [
-    'Bonjour, je souhaite réserver un chauffeur privé à Paris :',
+    '🚕 Bonjour, je souhaite réserver un Taxi à Paris :',
     '',
     `• Nom du client : ${clientName.trim()}`,
-    `• Véhicule : ${vehicle.label} (${vehicle.models})`,
+    `• Type de véhicule : ${vehicle.label} (${vehicle.models})`,
     `• Adresse de récupération : ${pickupAddress.trim()}`,
     `• Adresse de destination : ${dropoffAddress.trim()}`,
   ].join('\n')
