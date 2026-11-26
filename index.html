@@ -3,11 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taxi Paris 24/7 — Réservation Taxi Parisien | Normale, Haute Gamme, Luxe & Van</title>
+    <title>Taxi Paris 24/7 — Réservez maintenant ou Appelez maintenant (WhatsApp)</title>
     <meta
       name="description"
-      content="Réservez votre taxi à Paris 24h/24 et 7j/7 : voiture normale, haute gamme, voiture de luxe et van. Demande directe et rapide via WhatsApp."
+      content="Taxi à Paris disponible 24h/24 et 7j/7 (Gares, CDG, Orly). Réservez maintenant votre voiture normale, voiture de luxe ou van en ligne, ou appelez maintenant sur WhatsApp."
     />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (aperçu partages & réseaux) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Taxi Paris 24/7 — Réservez maintenant | Appelez maintenant" />
+    <meta
+      property="og:description"
+      content="Commandez votre Taxi à Paris 24h/24 : Voiture Normale, Voiture de Luxe ou Van. Réservation immédiate en ligne ou contact direct WhatsApp."
+    />
+
+    <!-- Données structurées Google Search (TaxiService + CTAs Réservez / Appelez) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Taxi Paris 24/7",
+        "description": "Service de réservation de Taxi à Paris 24h/24 et 7j/7 : voiture normale, voiture de luxe et van.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Paris"
+        },
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Taxi Paris 24/7",
+          "telephone": "+33612345678",
+          "openingHours": "Mo-Su 00:00-23:59",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Paris",
+            "addressCountry": "FR"
+          }
+        },
+        "potentialAction": [
+          {
+            "@type": "ReserveAction",
+            "name": "Réservez maintenant",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "/#reservation"
+            }
+          },
+          {
+            "@type": "CommunicateAction",
+            "name": "Appelez maintenant",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://wa.me/33612345678"
+            }
+          }
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
